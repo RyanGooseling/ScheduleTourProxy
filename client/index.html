@@ -5,8 +5,29 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="Bluefin"></div>
-  <script type="text/javascript" src="bundle.js"></script>
+  <div id="Photo-Carousel"></div>
+  <div id="Similar-Homes"></div>
+  <div id="Schools"></div>
+  <div id="Scheduler"></div>
+  <script src="http://localhost3001/app.js"></script>
+  <!-- Note that the appendix to this URL will be different than the app.js currently shown -->
+  <script src="http://localhost3002/app.js"></script>
+  <script src="http://localhost3003/app.js"></script>
+  <script src="http://localhost3004/app.js"></script>
+  <script>
+    ReactDOM.render(
+      React.createElement(Photo-Carousel), document.getElementById('Photo-Carousel')
+    );
+    ReactDOM.render(
+      React.createElement(Similar-Homes), document.getElementById('Similar-Homes')
+    );
+    ReactDOM.render(
+      React.createElement(Schools), document.getElementById('Schools')
+    );
+    ReactDOM.render(
+      React.createElement(Scheduler), document.getElementById('Scheduler')
+    );
+  </script>
 </body>
 </html>
 
