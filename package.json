@@ -20,5 +20,8 @@
     "eslint-config-airbnb": "^18.2.0",
     "nodemon": "^2.0.4",
     "webpack": "^4.44.2"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4"
   }
 }
