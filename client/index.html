@@ -5,28 +5,16 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="Photo-Carousel"></div>
-  <div id="Similar-Homes"></div>
-  <div id="Schools"></div>
+  <div id="similar-homes-app"></div>
+  <div id="schools"></div>
+  <div id="app"></div>
   <div id="Scheduler"></div>
-  <script src="http://localhost3001/main.js"></script>
-  <script src="http://localhost3002/bundle.js"></script>
-  <script src="http://localhost3003/main.js"></script>
-  <script src="http://localhost3004/Scheduler.js"></script>
-  <script>
-    ReactDOM.render(
-      React.createElement(Photo-Carousel), document.getElementById('app')
-    );
-    ReactDOM.render(
-      React.createElement(Similar-Homes), document.getElementById('app')
-    );
-    ReactDOM.render(
-      React.createElement(Schools), document.getElementById('schools')
-    );
-    ReactDOM.render(
-      React.createElement(Scheduler), document.getElementById('Scheduler')
-    );
-  </script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="http://localhost:3001/homes/1/main.js"></script>
+  <script src="http://localhost:3002/bundle.js"></script>
+  <script src="http://localhost:3003/main.js"></script>
+  <script src="http://localhost:3004/bundle.js"></script>
 </body>
 </html>
 
