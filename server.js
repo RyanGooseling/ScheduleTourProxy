@@ -10,6 +10,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/homes/:id', express.static(__dirname + '/client'));
 
+// How do I account for POST requests here?
+
 // Nathaniel
 app.get('/data/homes/:id', (req, res) => {
   axios({
