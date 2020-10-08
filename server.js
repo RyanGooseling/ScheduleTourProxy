@@ -8,19 +8,16 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/client'));
-
-// where do the get requests come into?
-// well it depends on where the gets are coming from!
+app.use('/homes/:id', express.static(__dirname + '/client'));
 
 // Nathaniel
-app.get('/homes/:id/similarhomes', (req, res) => {
+app.get('/data/homes/:id', (req, res) => {
   axios({
     method: 'get',
     url: `http://localhost:3001/data/homes/${req.params.id}`
   })
     .then((newData) => {
-      console.log('GET Req for Similar Homes')
+      console.log('Successful GET Req for Similar Homes')
       let rawData = newData.data;
       res.send(rawData)
     })
@@ -36,7 +33,7 @@ app.get('/homes/:id/schools', (req, res) => {
       url: `http://localhost:3002/homes/${req.params.id}/schools`
     })
       .then((newData) => {
-        console.log('GET Req for Schools')
+        console.log('Successful GET Req for Schools')
         let rawData = newData.data;
         res.send(rawData)
       })
@@ -47,12 +44,13 @@ app.get('/homes/:id/schools', (req, res) => {
 
 // Sam
 app.get('/homes/:id', (req, res) => {
+  console.log('GET Req for Photo-Carousel')
   axios({
     method: 'get',
     url: `http://localhost:3003/house/${req.params.id}`
   })
     .then((newData) => {
-      console.log('GET Req for Photo-Carousel')
+      console.log('Successful GET Req for Photo-Carousel')
       let rawData = newData.data;
       res.send(rawData)
     })
@@ -62,15 +60,13 @@ app.get('/homes/:id', (req, res) => {
 })
 
 // Andrew
-// URL directory written incorrectly in this module
-// Change to match homes/<number>/schedule
-app.get('/house/:id/', (req, res) => {
+app.get('/homes/:id/schedule', (req, res) => {
   axios({
     method: 'get',
-    url: `http://localhost:3004/house/${req.params.id}`
+    url: `http://localhost:3004/homes/${req.params.id}/schedule`
   })
     .then((newData) => {
-      console.log('GET Req for Schedule')
+      console.log('Successful GET Req for Schedule')
       let rawData = newData.data;
       res.send(rawData)
     })
