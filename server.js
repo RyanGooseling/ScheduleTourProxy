@@ -49,7 +49,7 @@ app.get('/homes/:id', (req, res) => {
   console.log('GET Req for Photo-Carousel')
   axios({
     method: 'get',
-    url: `http://localhost:3003/house/${req.params.id}`
+    url: `http://localhost:3003/homes/${req.params.id}`
   })
     .then((newData) => {
       console.log('Successful GET Req for Photo-Carousel')
