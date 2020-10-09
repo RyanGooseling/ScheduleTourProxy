@@ -4,3 +4,15 @@ body {
   opacity: 1;
   display: block
 }
+
+.top-section {
+  display: inline-flex;
+}
+
+#carousel {
+  width: auto;
+}
+
+#schools {
+  width: auto;
+}
