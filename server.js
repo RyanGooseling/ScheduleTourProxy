@@ -1,9 +1,11 @@
+require('dotenv').config()
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
+const currentIP = process.env.IP
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -65,7 +67,7 @@ app.get('/homes/:id', (req, res) => {
 app.get('/homes/:id/schedule', (req, res) => {
   axios({
     method: 'get',
-    url: `http://localhost:3004/homes/${req.params.id}/schedule`
+    url: `http://54.193.202.190:3004/homes/${req.params.id}/schedule`
   })
     .then((newData) => {
       console.log('Successful GET Req for Schedule')
@@ -80,5 +82,5 @@ app.get('/homes/:id/schedule', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Bluefin listening at http://localhost:${port}`);
+  console.log(`Bluefin listening at http://${currentIP}:${port}`);
 });
