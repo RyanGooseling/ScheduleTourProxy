@@ -21,7 +21,6 @@ app.get('/data/homes/:id', (req, res) => {
     url: `http://localhost:3001/data/homes/${req.params.id}`
   })
     .then((newData) => {
-      console.log('Successful GET Req for Similar Homes')
       let rawData = newData.data;
       res.send(rawData)
     })
@@ -37,7 +36,6 @@ app.get('/homes/:id/schools', (req, res) => {
       url: `http://localhost:3002/homes/${req.params.id}/schools`
     })
       .then((newData) => {
-        console.log('Successful GET Req for Schools')
         let rawData = newData.data;
         res.send(rawData)
       })
@@ -53,7 +51,6 @@ app.post('/homes/:id/schools/reviews', (req, res) => {
       data: req.body
     })
       .then((newData) => {
-        console.log('Successful GET Req for Schools')
         let rawData = newData.data;
         res.send(rawData)
       })
@@ -64,13 +61,11 @@ app.post('/homes/:id/schools/reviews', (req, res) => {
 
 // Sam
 app.get('/homes/:id', (req, res) => {
-  console.log('GET Req for Photo-Carousel')
   axios({
     method: 'get',
     url: `http://localhost:3003/homes/${req.params.id}`
   })
     .then((newData) => {
-      console.log('Successful GET Req for Photo-Carousel')
       let rawData = newData.data;
       res.send(rawData)
     })
@@ -86,7 +81,6 @@ app.get('/homes/:id/schedule', (req, res) => {
     url: `http://54.193.202.190:3004/homes/${req.params.id}/schedule`
   })
     .then((newData) => {
-      console.log('Successful GET Req for Schedule')
       let rawData = newData.data;
       res.send(rawData)
     })
@@ -110,7 +104,6 @@ app.post('/homes/:id/schedule', (req, res) => {
       console.log('Error with Schedule');
     });
 })
-
 
 
 app.listen(port, () => {
