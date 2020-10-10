@@ -18,7 +18,7 @@ app.use('/homes/:id', express.static(__dirname + '/client'));
 app.get('/data/homes/:id', (req, res) => {
   axios({
     method: 'get',
-    url: `http://localhost:3001/data/homes/${req.params.id}`
+    url: `http://35.170.191.195:3001/data/homes/${req.params.id}`
   })
     .then((newData) => {
       let rawData = newData.data;
@@ -96,7 +96,6 @@ app.post('/homes/:id/schedule', (req, res) => {
     data: req.body
   })
     .then((newData) => {
-      console.log('Successful POST Req for Schedule')
       let rawData = newData.data;
       res.send(rawData)
     })
