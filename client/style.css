@@ -4,3 +4,276 @@ body {
   opacity: 1;
   display: block
 }
+
+.top-section {
+  display: inline-flex;
+}
+
+.bot-section {
+  display: inline-flex;
+}
+
+/* Similar Homes */
+
+.nssh-main {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+.nssh-h1 {
+  font-size: 125%;
+}
+.nssh-text {
+  padding-left: 15px;
+}
+.nssh-ammenities {
+  display: inline;
+  padding-right: 10px;
+}
+.nssh-realty div {
+  display: inline;
+  padding-right: 3px;
+  color: rgb(170, 170, 170);
+  font-size: 70%;
+}
+.nssh-realty {
+  padding-bottom: 10px;
+}
+.nssh-tags {
+  padding-bottom: 35px;
+  display: flex;
+}
+.nssh-tags div {
+  display: inline;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 20px;
+  font-size: 85%;
+}
+.nssh-price {
+  font-weight: bold;
+  font-size: 125%;
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+.nssh-address {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 85%
+}
+.nssh-img {
+  height: 260px;
+  width: 390px;
+}
+.nssh-home {
+  box-shadow: 0 0 10px rgb(226, 226, 226);
+  margin-right: 647px;
+  width: 390px;
+}
+.nssh-home:hover {
+  box-shadow: 0 0 10px rgb(139, 134, 134);
+}
+.nssh-container {
+  position: relative;
+  text-align: center;
+  width: 390px;
+}
+.nssh-container .nssh-notes {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+.nssh-container .nssh-notes div {
+  background-color: #7556f2;
+  color: white;
+  border-radius: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: 6px;
+  font-size: 75%;
+  display: inline;
+}
+.nssh-container .nssh-notes .nssh-new {
+  background-color: green;
+}
+
+.nssh-container .nssh-arrow {
+  top: 200px;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.nssh-container .nssh-left-arrow {
+  position: absolute;
+  left: -10px;
+  font-size: 150%;
+}
+
+.nssh-container .nssh-right-arrow {
+  position: absolute;
+  left: 385px;
+  font-size: 150%;
+}
+
+/* Image Carousel */
+.image-carousel {
+  margin-top: 10px;
+  width: 728px;
+  max-width: 728px;
+}
+
+#imageUrl {
+  width: 728px;
+  height: 100%;
+}
+
+.PhotoArea {
+  position: relative;
+  height: 441px;
+  width: 100%;
+  background: #333;
+}
+
+.PhotoArea .nav {
+  height: 100%;
+  width: 180px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+}
+
+.PhotoArea .nav .navButton {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: calc(50% - 18px);
+  overflow: hidden;
+  border-radius: 100%;
+  opacity: .6;
+  background-color: rgba(0,0,0,.66);
+  border: 1px solid hsla(0,0%,100%,.66);
+  transition: opacity .25s linear;
+}
+
+.PhotoArea:hover .nav .navButton {
+  opacity: .8;
+  border: 1px solid hsla(0,0%,100%,.75);
+  background-color: rgba(0,0,0,.625);
+}
+
+.PhotoArea .nav.next {
+  right: 0;
+  user-select: none;
+}
+
+.PhotoArea .nav.prev .navButton {
+  transform: scaleX(-1);
+  left: 20px;
+}
+
+.PhotoArea .nav.next .navButton {
+  right: 20px;
+}
+
+.PhotoArea .nav .navButton:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px hsla(0,0%,100%,.15);
+}
+
+#photoTracker {
+  color: #fff;
+  font-weight: 600;
+  font-size: .75rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  display: inline-flex;
+  cursor: default;
+  border-radius: 3rem;
+  transition: opacity .25s linear;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 5;
+  background-color: rgba(0,0,0,.7);
+}
+
+.PhotoArea:hover #photoTracker {
+  opacity: 1;
+}
+
+.image-full {
+  height: 441px;
+}
+
+.bottom-banner {
+  width: 728px;
+  padding-top: .5rem;
+}
+
+.card {
+  width: calc((100% - 1rem)/3);
+  margin-right: .5rem;
+  cursor: pointer;
+  height: 91px;
+  display: inline-block;
+}
+
+.card:last-of-type {
+  margin-right: 0;
+}
+
+.cardv2 {
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.center {
+  margin: 0 5px 5px;
+  text-align: center;
+  min-width: 0;
+  flex: 1 1 50%;
+}
+
+.bottom-word {
+  margin: 0 5px 5px;
+  text-align: center;
+  min-width: 0;
+  flex: 1 1 50%;
+  font-size: .875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
