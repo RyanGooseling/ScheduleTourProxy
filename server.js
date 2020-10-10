@@ -46,6 +46,22 @@ app.get('/homes/:id/schools', (req, res) => {
       });
 })
 
+app.post('/homes/:id/schools/reviews', (req, res) => {
+  axios({
+      method: 'post',
+      url: `http://localhost:3002/homes/${req.params.id}/schools/reviews`,
+      data: req.body
+    })
+      .then((newData) => {
+        console.log('Successful GET Req for Schools')
+        let rawData = newData.data;
+        res.send(rawData)
+      })
+      .catch((err) => {
+        console.log('Error', err);
+      });
+})
+
 // Sam
 app.get('/homes/:id', (req, res) => {
   console.log('GET Req for Photo-Carousel')
@@ -71,6 +87,22 @@ app.get('/homes/:id/schedule', (req, res) => {
   })
     .then((newData) => {
       console.log('Successful GET Req for Schedule')
+      let rawData = newData.data;
+      res.send(rawData)
+    })
+    .catch((err) => {
+      console.log('Error with Schedule');
+    });
+})
+
+app.post('/homes/:id/schedule', (req, res) => {
+  axios({
+    method: 'post',
+    url: `http://54.193.202.190:3004/homes/${req.params.id}/schedule`,
+    data: req.body
+  })
+    .then((newData) => {
+      console.log('Successful POST Req for Schedule')
       let rawData = newData.data;
       res.send(rawData)
     })
