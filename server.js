@@ -48,7 +48,7 @@ app.post('/homes/:id/schools/reviews', (req, res) => {
   axios({
       method: 'post',
       url: `http://localhost:3002/homes/${req.params.id}/schools/reviews`,
-      data: req
+      data: req.body
     })
       .then((newData) => {
         let rawData = newData.data;
